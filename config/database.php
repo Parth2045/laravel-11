@@ -84,12 +84,12 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => "postgresql://postgresql_instance_1_user:uYa7lm2AKbD7sg5mwB73Zm6xGgt6kmRU@dpg-ctcijsrtq21c73fqn48g-a/postgresql_instance_1",
-            'host' => "dpg-ctcijsrtq21c73fqn48g-a",
-            'port' => "5432",
-            'database' => "postgresql_instance_1",
-            'username' => "postgresql_instance_1_user",
-            'password' => "uYa7lm2AKbD7sg5mwB73Zm6xGgt6kmRU",
+            'url' => env('DB_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'laravel'),
+            'username' => env('DB_USERNAME', 'root'),
+            'password' => env('DB_PASSWORD', ''),
             'charset' => env('DB_CHARSET', 'utf8'),
             'prefix' => '',
             'prefix_indexes' => true,

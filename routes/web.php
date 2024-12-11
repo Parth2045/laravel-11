@@ -25,5 +25,3 @@ Route::middleware('auth')->group(function () {
         Route::delete('/', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
 });
-
-// include_once './auth.php';
