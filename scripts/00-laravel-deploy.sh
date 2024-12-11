@@ -8,7 +8,8 @@ php artisan config:cache
 echo "Caching routes..."
 php artisan route:cache
 
+echo "env file changes..."
+mv .env.example .env
+
 echo "Running migrations..."
 php artisan migrate --force
-
-mv .env.example .env
